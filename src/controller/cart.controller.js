@@ -17,7 +17,6 @@ export const getCarts = async (req, res) => {
 
 export const getCartById = async (req, res) => {
     const { cid } = req.params;
-    console.log(cid);
     let result = await cartService.getCartById(cid);
     if (!result) {
         return res.status(404).send({ status: "error", message: "Carrito no encontrado" });

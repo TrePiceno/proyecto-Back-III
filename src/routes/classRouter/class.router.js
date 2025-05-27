@@ -20,7 +20,7 @@ export default class Router {
             try {
                 await callback.apply(this, params);
             } catch (error) {
-                console.log(error);
+                console.error(error);
                 params[1].status(500).send(error);
             }
         })
@@ -58,7 +58,6 @@ export default class Router {
         
         const token = authHeader.split(" ")[1];
         let user = jwt.verify(token, config.JWT_PRIVATE_KEY);
-        //¿El rol del usuario, existe dentro del arreglo de políticas?
         if (!policies.includes(user.role.toUpperCase())) return res.status(403).send({ error: "No tienes permisos para acceder a esta ruta" });
         req.user = user;
         next();

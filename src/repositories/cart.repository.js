@@ -1,4 +1,3 @@
-// import cartDTO from "../dao/dto/cart.dto.js";
 import cartDao from "../dao/cart.dao.js";
 import CartDTO from "../dao/dto/cart.dto.js";
 import productDao from "../dao/product.dao.js";

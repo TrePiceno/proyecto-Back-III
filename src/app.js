@@ -7,9 +7,10 @@ import config from './config/config.js';
 import connectDB from './config/db.config.js';
 import passport from 'passport';
 import initializePassport from './config/passport.config.js';
-import cors from 'cors'
+import cors from 'cors';
 import corsOptions from './config/cors.config.js';
 import cartRouter from './routes/cart.router.js';
+import orderRouter from './routes/order.router.js';
 
 const app = express();
 const connection = connectDB(config.URL_MONGO);
@@ -30,5 +31,6 @@ app.use("/api/session", new sessionRouter().getRouter());
 app.use("/api/user", new userRouter().getRouter());
 app.use("/api/product", new ProductRouter().getRouter());
 app.use("/api/cart", new cartRouter().getRouter());
+app.use("/api/order", new orderRouter().getRouter());
 
-app.listen(config.PORT, () => console.log(`Listening on PORT: ${config.PORT}`))
+app.listen(config.PORT, () => console.log(`Listening on PORT: ${config.PORT}`));

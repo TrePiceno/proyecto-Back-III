@@ -9,7 +9,7 @@ export default class Cart {
             return allCarts;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -19,7 +19,7 @@ export default class Cart {
             return await cartModel.findById(id).populate("products.product");
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -30,7 +30,7 @@ export default class Cart {
             let newCart = await cartModel.create({ products: [] });
             return newCart;
         } catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -40,7 +40,7 @@ export default class Cart {
             let cartDeleted = await cartModel.deleteOne({ _id: id });
             return cartDeleted
         } catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -75,7 +75,7 @@ export default class Cart {
             return await cart.save();
 
         } catch (error) {
-            console.log(" Error al agregar producto al carrito:", error.message);
+            console.error(" Error al agregar producto al carrito:", error.message);
             throw error;
         }
     };
@@ -104,7 +104,7 @@ export default class Cart {
             const updatedCart = await cart.save();
             return updatedCart;
         } catch (error) {
-            console.log(" Error al eliminar producto del carrito:", error.message);
+            console.error(" Error al eliminar producto del carrito:", error.message);
             throw error;
         }
     };

@@ -8,7 +8,7 @@ export default class Product {
             return allProduct;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -19,7 +19,7 @@ export default class Product {
             return product;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -30,7 +30,7 @@ export default class Product {
             return ProductCreated;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -42,7 +42,7 @@ export default class Product {
             return ProductUpdated;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -53,7 +53,7 @@ export default class Product {
             return productdeleted;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }

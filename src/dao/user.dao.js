@@ -8,7 +8,7 @@ export default class User {
             return allUsers;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -19,7 +19,7 @@ export default class User {
             return user;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -30,7 +30,7 @@ export default class User {
             return userCreated;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -41,7 +41,7 @@ export default class User {
             return userUpdated;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
@@ -52,7 +52,7 @@ export default class User {
             return userdeleted;
         }
         catch (error) {
-            console.log(error);
+            console.error(error);
             throw error
         }
     }
